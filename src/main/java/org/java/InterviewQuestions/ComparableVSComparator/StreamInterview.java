@@ -23,8 +23,12 @@ public class StreamInterview {
                 .asList("apple", "banana", "cherry", "date", "grapefruit");
         System.out.println(strings.stream().max(Comparator.comparing(String::length)));
 
-//        Average age of a list of Person objects using Java streams:
+        //Average age of a list of Person objects using Java streams:
         List<Integer> li = Arrays.asList(1,2,3,4);
         System.out.println(li.stream().collect(Collectors.averagingInt(Integer::intValue)));
+
+        // Find second largest number using Java streams:
+        List<Integer> l2 = Arrays.asList(1,2,3,4,4,6,2,99,44);
+        System.out.println(l2.stream().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst());
     }
 }
