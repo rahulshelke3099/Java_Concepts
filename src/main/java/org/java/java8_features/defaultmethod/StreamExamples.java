@@ -8,7 +8,8 @@ public class StreamExamples {
         List<Integer> ls = Arrays.asList(1,2,3,4,5,6,6,6,9);
 
         List<Integer> ls1 = ls.stream().filter(x->x%2==0).collect(Collectors.toList());
-
+        System.out.println(ls1);
+        System.out.println(ls.stream().collect(Collectors.groupingBy(x->x%2==0?"even":"odd")));
         // filter numbers and
         ls.stream().anyMatch(x->x%2==0);
 
