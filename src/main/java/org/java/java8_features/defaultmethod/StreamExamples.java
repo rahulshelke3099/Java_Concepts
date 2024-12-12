@@ -23,6 +23,13 @@ public class StreamExamples {
             System.out.println( iterator.next().getValue() );
         }
 
+        //longest string in list
+        List<String> lst = Arrays.asList("asa","g","ghghgh");
+        System.out.println(lst.stream().max(Comparator.comparing(String::length)));
 
+
+        // count frequency of each word in List
+        List<String> lst1 = Arrays.asList("apple","banana","apple","banana","orange");
+        System.out.println(lst1.stream().collect(Collectors.groupingBy(String::valueOf,Collectors.counting())));
     }
 }
