@@ -20,6 +20,14 @@ package org.java.java8_features.defaultmethod;
 //        Adding or subtracting days required manual calculation with Calendar.
 //        The new API offers fluent methods like .plusDays() and .minusDays().
 
+//Benefits of Java 8 Date & Time API
+//        ✅ Immutable & Thread-Safe: Unlike Date and Calendar, these classes are immutable and thread-safe.
+//        ✅ Better Readability & Simplicity: No more confusing Calendar or Date methods.
+//        ✅ Time Zone Support: ZonedDateTime handles time zones effectively.
+//        ✅ Fluent API for Date Manipulation: Methods like .plusDays(), .minusMonths() make it easy to work with dates.
+//        ✅ Supports Period and Duration Calculation: Period for dates, Duration for times.
+//        ✅ Follows ISO 8601 Standard: The format is more consistent and widely accepted.
+
 
 import java.time.LocalDate;
 import java.time.LocalTime;
