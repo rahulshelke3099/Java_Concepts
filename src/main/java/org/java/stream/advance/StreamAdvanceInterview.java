@@ -84,5 +84,18 @@ public class StreamAdvanceInterview {
         System.out.println(s.chars().mapToObj(c->(char)c).filter(c->!Character.isWhitespace(c)).
                 collect(Collectors.groupingBy(Function.identity(),Collectors.counting())));
 
+//        Merge and Sort Strings
+//        Problem:
+//        Given two arrays of strings, merge them, sort them alphabetically, and remove any duplicate strings.
+//    Output : {"apple", "banana", "cherry", "date", "fig"}
+
+        String[] arr1 = {"apple", "banana", "cherry", "apple"};
+        String[] arr2 =  {"banana", "date", "apple", "fig"};
+
+        Stream s1= Arrays.stream(arr1);
+        Stream s2= Arrays.stream(arr2);
+
+        System.out.println(Stream.concat(s1,s2).distinct().sorted().collect(Collectors.toList()));
+
     }
 }
